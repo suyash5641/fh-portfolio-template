@@ -1,5 +1,6 @@
 ---
 import "../global.css";
+import { SITE_CONFIG } from "../site-config.ts";
 
 type Props = {
   title?: string | undefined;
@@ -13,6 +14,7 @@ const {
 const urlStr = Astro.url.toString();
 const urlWithTrailingSlash = urlStr.endsWith("/") ? urlStr : urlStr + "/";
 const opengraphImageUrl = new URL(`./opengraph-image`, urlWithTrailingSlash);
+const twitterHandle = SITE_CONFIG.url.split("/").pop();
 ---
 
 <meta charset='UTF-8' />
