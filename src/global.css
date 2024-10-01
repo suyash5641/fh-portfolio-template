@@ -3,17 +3,20 @@
   --color-secondary: 0deg 0% 24%;
   --color-hover: 0deg 0% 97%;
   --color-hover-dark: 0deg 0% 30%;
-  --nav-link-light-color: #000;
-  --nav-link-dark-color: #fff;
-  --tw-prose-body-dark: #fff;
-  --tw-prose-headings-dark: #fff;
-  --tw-prose-quotes-dark: #9da8bf;
-  --tw-prose-bold-dark: #a5c1ff;
-  --tw-prose-links-dark: #3b6ad1;
+  --light-text-color: #fff;
+  --background-color-dark: #000;
 }
 
 html {
   scrollbar-gutter: stable;
+}
+
+.lightThemeIcon {
+  fill: black;
+}
+
+.darkThemeIcon {
+  fill: transparent;
 }
 
 html.dark {
@@ -34,10 +37,14 @@ html.dark {
   color: #fff;
 }
 
-.dark .prose {
-  --tw-prose-body: var(--tw-prose-body-dark);
-  --tw-prose-headings: var(--tw-prose-headings-dark, #fff);
-  --tw-prose-quotes: var(--tw-prose-quotes-dark);
-  --tw-prose-bold: var(--tw-prose-bold-dark);
-  --tw-prose-links: var(--tw-prose-links-dark);
+.dark .decoration-secondary {
+  text-decoration-color: #fff;
+}
+
+.dark .lightThemeIcon {
+  fill: transparent;
+}
+
+.dark .darkThemeIcon {
+  fill: white;
 }
